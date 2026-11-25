@@ -1,0 +1,403 @@
+{
+  "project": {
+    "name": "Nails By M | User login/sign up page, home page showing best selling products, product catalog page, contact us page, home page should include review snippets. User should be apple to add/remove products in card and checkout",
+    "description": "Acrylic Nails selling website, users should be able to make a account using gmail, and buy products, track their order, receive confirmation email | Customers who want to browse and purchase press-on nails, and an admin (myself) to manage products, inventory, and orders.",
+    "type": "| product catalogue, product images/details/sizes/designs/price"
+  },
+  "qa": [
+    {
+      "question": "What is the name of your project?",
+      "answer": "Nails By M | User login/sign up page, home page showing best selling products, product catalog page, contact us page, home page should include review snippets. User should be apple to add/remove products in card and checkout"
+    },
+    {
+      "question": "Describe the project and what it should do.",
+      "answer": "Acrylic Nails selling website, users should be able to make a account using gmail, and buy products, track their order, receive confirmation email | Customers who want to browse and purchase press-on nails, and an admin (myself) to manage products, inventory, and orders."
+    },
+    {
+      "question": "What type of website is it?",
+      "answer": "| product catalogue, product images/details/sizes/designs/price"
+    },
+    {
+      "question": "Who will use it? (e.g. customers, admin)",
+      "answer": "Target customers are female between age of 14-40 | Pink themed website, easy trendy ui, payment option should include credit/debit"
+    },
+    {
+      "question": "List the main features you need (comma separated).",
+      "answer": "User Login/Signup, Product Catalogue, Product Cart, Payment getaway | They must work well., User Profile Management, Order History and Tracking, Wishlist Functionality"
+    },
+    {
+      "question": "Which of those features are must-have for the first launch?",
+      "answer": "1 and 2 | User profile management(signup/login) and order placement and tracking"
+    },
+    {
+      "question": "Any outside services needed? (payments, email, maps...)",
+      "answer": "Online payment gateway, email notifications, courier services | Make them functional"
+    },
+    {
+      "question": "Any technology or framework preference? (e.g. Django)",
+      "answer": "Not specified"
+    },
+    {
+      "question": "Any budget or deadline limits?",
+      "answer": "1 Month | 45k"
+    }
+  ],
+  "ui": {
+    "theme": {
+      "name": "Ocean Blue",
+      "primary": "#1E6FD9",
+      "background": "#F5F9FF"
+    },
+    "logo_svg": "<svg xmlns='http://www.w3.org/2000/svg' width='200' height='100' viewBox='0 0 200 100'><rect width='200' height='100' fill='#F5F9FF'/><circle cx='30' cy='50' r='20' fill='#1E6FD9'/><text x='60' y='50' font-family='Arial' font-size='40' fill='#1E6FD9'>Nails By M</text></svg>"
+  },
+  "analysis": {
+    "objectives": [
+      "Create a user-friendly acrylic nails selling website.",
+      "Enable users to create accounts and manage their profiles.",
+      "Facilitate product browsing, selection, and purchasing.",
+      "Provide order tracking and email notifications."
+    ],
+    "stakeholders": [
+      "Customers (female aged 14-40)",
+      "Admin (myself)"
+    ],
+    "functional_requirements": [
+      {
+        "id": "FR-1",
+        "text": "User Login/Signup",
+        "feature": "User Login/Signup"
+      },
+      {
+        "id": "FR-2",
+        "text": "Product Catalogue",
+        "feature": "Product Catalogue"
+      },
+      {
+        "id": "FR-3",
+        "text": "Product Cart",
+        "feature": "Product Cart"
+      },
+      {
+        "id": "FR-4",
+        "text": "Payment Gateway",
+        "feature": "Payment getaway | they must work well."
+      },
+      {
+        "id": "FR-5",
+        "text": "User Profile Management",
+        "feature": "User Profile Management"
+      },
+      {
+        "id": "FR-6",
+        "text": "Order History and Tracking",
+        "feature": "Order History and Tracking"
+      },
+      {
+        "id": "FR-7",
+        "text": "Wishlist Functionality",
+        "feature": "Wishlist Functionality"
+      }
+    ],
+    "non_functional_requirements": [
+      "Website should have a pink theme and trendy UI.",
+      "Payment options must include credit/debit cards.",
+      "Website should be responsive and accessible."
+    ],
+    "scope": {
+      "in": [
+        "User account creation and management",
+        "Product browsing and purchasing",
+        "Order tracking and email notifications"
+      ],
+      "out": [
+        "Physical store presence",
+        "Non-acrylic nail products"
+      ]
+    },
+    "risks": [
+      "Potential delays in payment gateway integration.",
+      "User data security and privacy concerns.",
+      "Dependence on third-party courier services."
+    ],
+    "data_entities": [
+      "User accounts",
+      "Product listings",
+      "Order details",
+      "Payment transactions"
+    ]
+  },
+  "user_stories": [
+    {
+      "id": "US-1",
+      "as_a": "User",
+      "i_want": "to log in or sign up",
+      "so_that": "I can access my account",
+      "fr_ids": [
+        "FR-1"
+      ],
+      "priority": "Must"
+    },
+    {
+      "id": "US-2",
+      "as_a": "User",
+      "i_want": "to view the product catalogue",
+      "so_that": "I can browse available products",
+      "fr_ids": [
+        "FR-2"
+      ],
+      "priority": "Must"
+    },
+    {
+      "id": "US-3",
+      "as_a": "User",
+      "i_want": "to add products to my cart",
+      "so_that": "I can purchase multiple items at once",
+      "fr_ids": [
+        "FR-3"
+      ],
+      "priority": "Should"
+    },
+    {
+      "id": "US-4",
+      "as_a": "User",
+      "i_want": "to use a payment gateway",
+      "so_that": "I can securely pay for my orders",
+      "fr_ids": [
+        "FR-4"
+      ],
+      "priority": "Must"
+    },
+    {
+      "id": "US-5",
+      "as_a": "User",
+      "i_want": "to manage my user profile",
+      "so_that": "I can update my personal information",
+      "fr_ids": [
+        "FR-5"
+      ],
+      "priority": "Must"
+    },
+    {
+      "id": "US-6",
+      "as_a": "User",
+      "i_want": "to view my order history and track my orders",
+      "so_that": "I can keep track of my purchases",
+      "fr_ids": [
+        "FR-6"
+      ],
+      "priority": "Must"
+    },
+    {
+      "id": "US-7",
+      "as_a": "User",
+      "i_want": "to add products to a wishlist",
+      "so_that": "I can save items for future purchase",
+      "fr_ids": [
+        "FR-7"
+      ],
+      "priority": "Could"
+    }
+  ],
+  "acceptance_criteria": [
+    {
+      "id": "AC-1",
+      "story_id": "US-1",
+      "given": "I am on the login/signup page",
+      "when": "I enter valid credentials and click the login button",
+      "then": "I should be redirected to my account dashboard"
+    },
+    {
+      "id": "AC-2",
+      "story_id": "US-1",
+      "given": "I am on the login/signup page",
+      "when": "I enter invalid credentials and click the login button",
+      "then": "I should see an error message indicating the credentials are incorrect"
+    },
+    {
+      "id": "AC-3",
+      "story_id": "US-1",
+      "given": "I am on the login/signup page",
+      "when": "I choose to sign up and fill in the required information",
+      "then": "I should receive a confirmation email after successful registration"
+    },
+    {
+      "id": "AC-4",
+      "story_id": "US-1",
+      "given": "I have an existing account",
+      "when": "I click on the 'Forgot Password' link",
+      "then": "I should receive an email with instructions to reset my password"
+    },
+    {
+      "id": "AC-1",
+      "story_id": "US-2",
+      "given": "I am logged into my account",
+      "when": "I navigate to the product catalogue",
+      "then": "I should see a list of available products"
+    },
+    {
+      "id": "AC-2",
+      "story_id": "US-2",
+      "given": "I am on the product catalogue page",
+      "when": "I filter products by category",
+      "then": "I should see only products that match the selected category"
+    },
+    {
+      "id": "AC-3",
+      "story_id": "US-2",
+      "given": "I am on the product catalogue page",
+      "when": "I search for a specific product",
+      "then": "I should see the product that matches my search query"
+    },
+    {
+      "id": "AC-4",
+      "story_id": "US-2",
+      "given": "I am on the product catalogue page",
+      "when": "I click on a product",
+      "then": "I should be taken to the product detail page"
+    },
+    {
+      "id": "AC-1",
+      "story_id": "US-3",
+      "given": "I am viewing a product detail page",
+      "when": "I click the 'Add to Cart' button",
+      "then": "The product should be added to my shopping cart"
+    },
+    {
+      "id": "AC-2",
+      "story_id": "US-3",
+      "given": "I have added products to my cart",
+      "when": "I view my cart",
+      "then": "I should see all the products I have added"
+    },
+    {
+      "id": "AC-3",
+      "story_id": "US-3",
+      "given": "I have products in my cart",
+      "when": "I remove a product from the cart",
+      "then": "The product should no longer appear in my cart"
+    },
+    {
+      "id": "AC-4",
+      "story_id": "US-3",
+      "given": "I have products in my cart",
+      "when": "I proceed to checkout",
+      "then": "I should be taken to the payment page"
+    },
+    {
+      "id": "AC-1",
+      "story_id": "US-4",
+      "given": "I am on the checkout page",
+      "when": "I enter my payment details and submit",
+      "then": "The payment should be processed securely"
+    },
+    {
+      "id": "AC-2",
+      "story_id": "US-4",
+      "given": "I am on the checkout page",
+      "when": "I enter invalid payment details",
+      "then": "I should see an error message indicating the payment failed"
+    },
+    {
+      "id": "AC-3",
+      "story_id": "US-4",
+      "given": "I have successfully completed a payment",
+      "when": "I check my order history",
+      "then": "I should see the new order listed"
+    },
+    {
+      "id": "AC-4",
+      "story_id": "US-4",
+      "given": "I am on the checkout page",
+      "when": "I choose to cancel the payment",
+      "then": "I should be redirected back to my cart without any charges"
+    },
+    {
+      "id": "AC-1",
+      "story_id": "US-5",
+      "given": "I am logged into my account",
+      "when": "I navigate to the profile management page",
+      "then": "I should see my current personal information"
+    },
+    {
+      "id": "AC-2",
+      "story_id": "US-5",
+      "given": "I am on the profile management page",
+      "when": "I update my personal information and save changes",
+      "then": "My updated information should be saved successfully"
+    },
+    {
+      "id": "AC-3",
+      "story_id": "US-5",
+      "given": "I have updated my profile information",
+      "when": "I log out and log back in",
+      "then": "I should see my updated information in my profile"
+    },
+    {
+      "id": "AC-4",
+      "story_id": "US-5",
+      "given": "I am on the profile management page",
+      "when": "I attempt to save incomplete information",
+      "then": "I should see an error message indicating the required fields"
+    },
+    {
+      "id": "AC-1",
+      "story_id": "US-6",
+      "given": "I am logged into my account",
+      "when": "I navigate to the order history page",
+      "then": "I should see a list of my past orders"
+    },
+    {
+      "id": "AC-2",
+      "story_id": "US-6",
+      "given": "I am on the order history page",
+      "when": "I click on an order",
+      "then": "I should see the details of that order"
+    },
+    {
+      "id": "AC-3",
+      "story_id": "US-6",
+      "given": "I have orders in my history",
+      "when": "I track an order",
+      "then": "I should see the current status of that order"
+    },
+    {
+      "id": "AC-4",
+      "story_id": "US-6",
+      "given": "I am on the order history page",
+      "when": "I refresh the page",
+      "then": "I should see the most up-to-date order status"
+    },
+    {
+      "id": "AC-1",
+      "story_id": "US-7",
+      "given": "I am logged into my account",
+      "when": "I view a product detail page",
+      "then": "I should see an option to add the product to my wishlist"
+    },
+    {
+      "id": "AC-2",
+      "story_id": "US-7",
+      "given": "I have added products to my wishlist",
+      "when": "I navigate to my wishlist page",
+      "then": "I should see all the products I have saved"
+    },
+    {
+      "id": "AC-3",
+      "story_id": "US-7",
+      "given": "I have products in my wishlist",
+      "when": "I remove a product from the wishlist",
+      "then": "The product should no longer appear in my wishlist"
+    },
+    {
+      "id": "AC-4",
+      "story_id": "US-7",
+      "given": "I am on the wishlist page",
+      "when": "I click on a product in my wishlist",
+      "then": "I should be taken to the product detail page"
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "remaining_gaps": ""
+  }
+}

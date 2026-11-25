@@ -1,0 +1,22 @@
+# Secrets - never commit
+.env
+**/.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated at run time
+Business-Analyst-Agent-main/outputs/runs/
+Business-Analyst-Agent-main/vector_store/
+Business-Analyst-Agent-main/data/
+Business-Analyst-Agent-main/knowledge_base/uploads/
+data/
+vector_store/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

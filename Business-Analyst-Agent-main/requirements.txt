@@ -1,0 +1,26 @@
+# Core
+python-dotenv
+langgraph
+python-docx
+
+# Gemini provider 
+langchain-google-genai
+
+# Persistent RAG vector store
+langchain-chroma
+chromadb
+
+# PDF support for knowledge-base documents
+pypdf
+
+# Persistent conversations: lets a paused session continue after a server restart
+# (used when SESSION_PERSISTENCE=sqlite, which is the default)
+langgraph-checkpoint-sqlite
+
+# LLM_PROVIDER=openrouter
+langchain-openrouter
+
+# Web backend 
+fastapi
+uvicorn[standard]
+pydantic

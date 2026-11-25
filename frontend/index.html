@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Analyst Agent</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Business Analyst Agent</h1>
+    <div class="header-actions" id="header-actions" hidden>
+      <span id="user-label" class="user-label"></span>
+      <button id="history-button" type="button" class="secondary-button">My sessions</button>
+      <button id="new-session-button" type="button" class="secondary-button">New session</button>
+      <button id="knowledge-button" type="button" class="secondary-button" hidden>Knowledge base</button>
+      <button id="logout-button" type="button" class="secondary-button">Sign out</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="error-banner" class="error-banner" role="alert" hidden></div>
+    <div id="loading-indicator" class="loading-indicator" aria-live="polite" hidden>Loading…</div>
+
+    <!-- Sign in / register -->
+    <section id="auth-screen" hidden>
+      <h2 id="auth-title">Sign in</h2>
+      <form id="auth-form">
+        <label for="auth-username">Username</label>
+        <input id="auth-username" type="text" autocomplete="username" required />
+        <label for="auth-password">Password</label>
+        <input id="auth-password" type="password" autocomplete="current-password" required minlength="8" />
+        <div class="button-row">
+          <button type="submit" id="auth-submit" class="primary-button">Sign in</button>
+          <button type="button" id="auth-toggle" class="secondary-button">Create an account</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Start / history -->
+    <section id="start-screen" hidden>
+      <p>Start a new requirements-analysis session with the Business Analyst Agent.</p>
+      <button id="start-button" type="button" class="primary-button">Start new session</button>
+    </section>
+
+    <section id="history-screen" hidden>
+      <h2>My sessions</h2>
+      <p id="history-empty" hidden>You have no sessions yet.</p>
+      <ul id="history-list" class="plain-list"></ul>
+    </section>
+
+    <!-- Conversation -->
+    <section id="conversation-screen" hidden aria-live="polite">
+      <h2>Question</h2>
+      <p id="question-text" class="question-text"></p>
+
+      <div id="summary-panel" class="panel" hidden>
+        <h3>Your answers</h3>
+        <table class="summary-table"><tbody id="summary-body"></tbody></table>
+        <div class="summary-theme">
+          <span id="summary-swatch" class="swatch" aria-hidden="true"></span>
+          <span id="summary-theme-name"></span>
+        </div>
+        <img id="summary-logo" class="logo-preview" alt="Selected logo preview" hidden />
+      </div>
+
+      <div id="previews-panel" class="previews" hidden></div>
+
+      <div id="triage-panel" class="panel" hidden>
+        <h3>Items that need your attention</h3>
+        <ul id="triage-list" class="triage-list"></ul>
+      </div>
+
+      <div id="options-container" class="options-container"></div>
+      <div id="quick-replies" class="options-container"></div>
+      <form id="answer-form">
+        <label for="answer-input">Your answer</label>
+        <input id="answer-input" type="text" autocomplete="off" />
+        <button type="submit" class="primary-button">Submit</button>
+      </form>
+    </section>
+
+    <!-- Result -->
+    <section id="result-screen" hidden>
+      <h2>Requirements</h2>
+
+      <h3>Validation status</h3>
+      <span id="validation-badge" class="badge badge-neutral">Not yet validated</span>
+      <ul id="gaps-list"></ul>
+
+      <div id="concerns-panel" class="panel" hidden>
+        <h3>Review flagged items</h3>
+        <p class="muted">These items were flagged by rule-based checks for ambiguity or inconsistency.
+          Review each one, then mark it as reviewed. The validation status is recomputed by the validator.</p>
+        <ul id="concerns-list" class="triage-list"></ul>
+        <button id="resolve-all-button" type="button" class="primary-button">Mark all as reviewed</button>
+      </div>
+      <div id="advisory-panel" class="panel" hidden>
+        <h3>Suggestions</h3>
+        <ul id="advisory-list" class="triage-list"></ul>
+      </div>
+
+      <h3>Retrieved evidence</h3>
+      <ul id="evidence-list"></ul>
+
+      <div id="requirements-list"></div>
+
+      <h3>User stories and acceptance criteria</h3>
+      <div id="traceability-list"></div>
+
+      <h3>Artifacts</h3>
+      <p id="artifacts-summary"></p>
+      <ul id="artifacts-list"></ul>
+    </section>
+
+    <!-- Knowledge base (administrators) -->
+    <section id="knowledge-screen" hidden>
+      <h2>Knowledge base</h2>
+      <p class="muted">Upload .txt, .md, .docx or .pdf files. They are added to the retrieval knowledge base.</p>
+      <form id="knowledge-form">
+        <label for="knowledge-file">Document</label>
+        <input id="knowledge-file" type="file" accept=".txt,.md,.docx,.pdf" required />
+        <button type="submit" class="primary-button">Upload and index</button>
+      </form>
+      <p id="knowledge-message" aria-live="polite"></p>
+      <h3>Indexed documents</h3>
+      <ul id="knowledge-list" class="plain-list"></ul>
+    </section>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
